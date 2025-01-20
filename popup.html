@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Text Summarizer</title>
+    <style>
+        body {
+            width: 400px;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+        }
+        #summary {
+            margin-top: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            min-height: 100px;
+        }
+        #status {
+            color: #666;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <h2>Text Summarizer</h2>
+    <div id="status">Loading summarization model...</div>
+    <div id="summary"></div>
+    <script type="module" src="dist/transformers.min.js"></script>
+    <script type="module" src="popup.js"></script>
+</body>
+</html>

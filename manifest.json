@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "Text Summarizer",
+  "version": "1.0",
+  "description": "Summarizes text using Transformers.js",
+  "permissions": [
+    "storage",
+    "unlimitedStorage"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self'; connect-src *"
+  },
+  "web_accessible_resources": [{
+    "resources": ["dist/*"],
+    "matches": ["<all_urls>"]
+  }]
+}
